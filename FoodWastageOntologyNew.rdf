@@ -1,0 +1,2523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#"
+	xmlns:agg="http://jena.apache.org/ARQ/function/aggregate#"
+	xmlns:sail="http://www.openrdf.org/config/sail#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:geof="http://www.opengis.net/def/function/geosparql/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:fn="http://www.w3.org/2005/xpath-functions"
+	xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:FoodWastageOntology="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#"
+	xmlns:spif="http://spinrdf.org/spif#"
+	xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+	xmlns:shacl="http://rdf4j.org/config/sail/shacl#"
+	xmlns:geo="http://www.opengis.net/ont/geosparql#"
+	xmlns:path="http://www.ontotext.com/path#"
+	xmlns:geo-ont="http://www.geonames.org/ontology#"
+	xmlns:array="http://www.w3.org/2005/xpath-functions/array"
+	xmlns:apf="http://jena.apache.org/ARQ/property#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:rep="http://www.openrdf.org/config/repository#"
+	xmlns:map="http://www.w3.org/2005/xpath-functions/map"
+	xmlns:sr="http://www.openrdf.org/config/repository/sail#"
+	xmlns:rdf4j="http://rdf4j.org/schema/rdf4j#"
+	xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:afn="http://jena.apache.org/ARQ/function#"
+	xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+	xmlns:ontogeo="http://www.ontotext.com/owlim/geo#"
+	xmlns:onto-geo="http://www.ontotext.com/plugins/geosparql#"
+	xmlns:list="http://jena.apache.org/ARQ/list#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:ofn="http://www.ontotext.com/sparql/functions/"
+	xmlns:geoext="http://rdf.useekm.com/ext#"
+	xmlns:graphdb="http://www.ontotext.com/config/graphdb#"
+	xmlns:sesame="http://www.openrdf.org/schema/sesame#"
+	xmlns:math="http://www.w3.org/2005/xpath-functions/math">
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#avoidsAllergen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#claimedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#containsAllergen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donatedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonated">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasFoodType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasHigherPriorityThan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLowerPriorityThan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasParentType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#isPreferredBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#prefersFoodType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#isRejectedBy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#rejectsFoodType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userLocatedAt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donationMongoID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasExpiryDate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLatitude">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLongitude">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userMongoID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#AtRiskDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#ClaimedDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Claimed">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Delivered">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#BakedGoods">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Beverages">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DairyProducts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Diabetic_Sweets">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FreshProduce">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Grains_and_Cerals">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Non_Diabetic_Sweets">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Processed_and_Packaged">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Sea_Food">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Snacks">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Spices_and_Condiments">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Staple_Foods">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#PreferredDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Low">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Medium">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#TrustedDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#UrgentDonation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node115">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node118">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node119">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node120">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node124">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node125">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node126">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node127">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node142">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node146">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationLocation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasUserLocation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node153">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Crustacean_shellfish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Fish">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Milk">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Sesame">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Soybeans">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Tree_Nuts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Wheat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node162">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node164">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node166">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node167">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node171">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node172">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node173">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node174">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node175">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node176">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node191">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node192">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node193">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node194">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node198">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Peanuts">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node199">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123_Location">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#don12345_Location">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#xyzq_Donor">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node209">
+	<rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node212">
+	<rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor_xyzq">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node215">
+	<rdf:type rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#xyz1234">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6832c9d165d2ec4756cab2ed_Donor">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donor456_Donor">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<rdf:type rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+	<rdfs:subClassOf rdf:nodeID="node191"/>
+	<rdfs:subClassOf rdf:nodeID="node192"/>
+	<rdfs:subClassOf rdf:nodeID="node193"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation">
+	<rdfs:subClassOf rdf:nodeID="node124"/>
+	<rdfs:subClassOf rdf:nodeID="node125"/>
+	<rdfs:subClassOf rdf:nodeID="node126"/>
+	<rdfs:subClassOf rdf:nodeID="node171"/>
+	<rdfs:subClassOf rdf:nodeID="node172"/>
+	<rdfs:subClassOf rdf:nodeID="node173"/>
+	<rdfs:subClassOf rdf:nodeID="node174"/>
+	<rdfs:subClassOf rdf:nodeID="node175"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User">
+	<rdfs:subClassOf rdf:nodeID="node198"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#ClaimedDonation">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+	<rdfs:subClassOf rdf:nodeID="node119"/>
+	<rdfs:subClassOf rdf:nodeID="node166"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#PreferredDonation">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#TrustedDonation">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#UrgentDonation">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#avoidsAllergen">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#claimedBy">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#containsAllergen">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donatedBy">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasFoodType">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasHigherPriorityThan">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLowerPriorityThan">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasParentType">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#prefersFoodType">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#rejectsFoodType">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userLocatedAt">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donationMongoID">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasExpiryDate">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLatitude">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLongitude">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userMongoID">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationLocation">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasUserLocation">
+	<rdfs:domain rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#avoidsAllergen">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#claimedBy">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#containsAllergen">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donatedBy">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasFoodType">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasHigherPriorityThan">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLowerPriorityThan">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasParentType">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#prefersFoodType">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#rejectsFoodType">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userLocatedAt">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donationMongoID">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasExpiryDate">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLatitude">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLongitude">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#userMongoID">
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationLocation">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasUserLocation">
+	<rdfs:range rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen">
+	<owl:equivalentClass rdf:nodeID="node153"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType">
+	<owl:equivalentClass rdf:nodeID="node127"/>
+	<owl:equivalentClass rdf:nodeID="node176"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus">
+	<owl:equivalentClass rdf:nodeID="node120"/>
+	<owl:equivalentClass rdf:nodeID="node167"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority">
+	<owl:equivalentClass rdf:nodeID="node142"/>
+	<owl:equivalentClass rdf:nodeID="node194"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#AtRiskDonation">
+	<owl:equivalentClass rdf:nodeID="node115"/>
+	<owl:equivalentClass rdf:nodeID="node162"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node115">
+	<owl:intersectionOf rdf:nodeID="node116"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node162">
+	<owl:intersectionOf rdf:nodeID="node163"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node124">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node125">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node126">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node171">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node172">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node173">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node174">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node175">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Priority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node191">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node192">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node193">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node198">
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#donatedBy">
+	<owl:inverseOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonated"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasHigherPriorityThan">
+	<owl:inverseOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasLowerPriorityThan"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#isPreferredBy">
+	<owl:inverseOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#prefersFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#isRejectedBy">
+	<owl:inverseOf rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#rejectsFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor">
+	<owl:disjointWith rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node118">
+	<owl:hasValue rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node119">
+	<owl:hasValue rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Claimed"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node164">
+	<owl:hasValue rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node166">
+	<owl:hasValue rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Claimed"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node118">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node119">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node124">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node125">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node126">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node164">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node166">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node171">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#containsAllergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node172">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationLocation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node173">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasDonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node174">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node175">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasPriority"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node191">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#avoidsAllergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node192">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#prefersFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node193">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#rejectsFoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node198">
+	<owl:onProperty rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#hasUserLocation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node120">
+	<owl:oneOf rdf:nodeID="node121"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node127">
+	<owl:oneOf rdf:nodeID="node128"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node142">
+	<owl:oneOf rdf:nodeID="node143"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node153">
+	<owl:oneOf rdf:nodeID="node154"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node167">
+	<owl:oneOf rdf:nodeID="node168"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node176">
+	<owl:oneOf rdf:nodeID="node177"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node194">
+	<owl:oneOf rdf:nodeID="node195"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node146">
+	<owl:members rdf:nodeID="node147"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node199">
+	<owl:members rdf:nodeID="node200"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node116">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node117">
+	<rdf:first rdf:nodeID="node118"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node121">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node122">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Claimed"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node123">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Delivered"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node128">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#BakedGoods"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node129">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Beverages"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node130">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node131">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DairyProducts"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node132">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Diabetic_Sweets"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node133">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FreshProduce"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node134">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Grains_and_Cerals"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node135">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node136">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Non_Diabetic_Sweets"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node137">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Processed_and_Packaged"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node138">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Sea_Food"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node139">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Snacks"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node140">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Spices_and_Condiments"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node141">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Staple_Foods"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node143">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node144">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Low"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node145">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Medium"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node147">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node148">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node149">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node150">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node151">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node152">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node154">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Crustacean_shellfish"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node155">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node156">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Fish"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node157">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Milk"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node158">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Sesame"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node159">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Soybeans"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node160">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Tree_Nuts"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node161">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Wheat"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node163">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node165">
+	<rdf:first rdf:nodeID="node164"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node168">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node169">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Claimed"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node170">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Delivered"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node177">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#BakedGoods"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node178">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Beverages"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node179">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node180">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DairyProducts"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node181">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Diabetic_Sweets"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node182">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FreshProduce"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node183">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Grains_and_Cerals"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node184">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node185">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Non_Diabetic_Sweets"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node186">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Processed_and_Packaged"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node187">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Sea_Food"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node188">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Snacks"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node189">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Spices_and_Condiments"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node190">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Staple_Foods"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node195">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node196">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Low"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node197">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Medium"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node200">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Allergen"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node201">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#DonationStatus"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node202">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodDonation"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node203">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#FoodType"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node204">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Location"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node205">
+	<rdf:first rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#User"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node116">
+	<rdf:rest rdf:nodeID="node117"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node117">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node121">
+	<rdf:rest rdf:nodeID="node122"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node122">
+	<rdf:rest rdf:nodeID="node123"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node123">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node128">
+	<rdf:rest rdf:nodeID="node129"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node129">
+	<rdf:rest rdf:nodeID="node130"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node130">
+	<rdf:rest rdf:nodeID="node131"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node131">
+	<rdf:rest rdf:nodeID="node132"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node132">
+	<rdf:rest rdf:nodeID="node133"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node133">
+	<rdf:rest rdf:nodeID="node134"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node134">
+	<rdf:rest rdf:nodeID="node135"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node135">
+	<rdf:rest rdf:nodeID="node136"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node136">
+	<rdf:rest rdf:nodeID="node137"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node137">
+	<rdf:rest rdf:nodeID="node138"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node138">
+	<rdf:rest rdf:nodeID="node139"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node139">
+	<rdf:rest rdf:nodeID="node140"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node140">
+	<rdf:rest rdf:nodeID="node141"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node141">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node143">
+	<rdf:rest rdf:nodeID="node144"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node144">
+	<rdf:rest rdf:nodeID="node145"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node145">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node147">
+	<rdf:rest rdf:nodeID="node148"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node148">
+	<rdf:rest rdf:nodeID="node149"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node149">
+	<rdf:rest rdf:nodeID="node150"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node150">
+	<rdf:rest rdf:nodeID="node151"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node151">
+	<rdf:rest rdf:nodeID="node152"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node152">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node154">
+	<rdf:rest rdf:nodeID="node155"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node155">
+	<rdf:rest rdf:nodeID="node156"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node156">
+	<rdf:rest rdf:nodeID="node157"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node157">
+	<rdf:rest rdf:nodeID="node158"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node158">
+	<rdf:rest rdf:nodeID="node159"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node159">
+	<rdf:rest rdf:nodeID="node160"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node160">
+	<rdf:rest rdf:nodeID="node161"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node161">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node163">
+	<rdf:rest rdf:nodeID="node165"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node165">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node168">
+	<rdf:rest rdf:nodeID="node169"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node169">
+	<rdf:rest rdf:nodeID="node170"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node170">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node177">
+	<rdf:rest rdf:nodeID="node178"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node178">
+	<rdf:rest rdf:nodeID="node179"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node179">
+	<rdf:rest rdf:nodeID="node180"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node180">
+	<rdf:rest rdf:nodeID="node181"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node181">
+	<rdf:rest rdf:nodeID="node182"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node182">
+	<rdf:rest rdf:nodeID="node183"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node183">
+	<rdf:rest rdf:nodeID="node184"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node184">
+	<rdf:rest rdf:nodeID="node185"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node185">
+	<rdf:rest rdf:nodeID="node186"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node186">
+	<rdf:rest rdf:nodeID="node187"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node187">
+	<rdf:rest rdf:nodeID="node188"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node188">
+	<rdf:rest rdf:nodeID="node189"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node189">
+	<rdf:rest rdf:nodeID="node190"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node190">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node195">
+	<rdf:rest rdf:nodeID="node196"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node196">
+	<rdf:rest rdf:nodeID="node197"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node197">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node200">
+	<rdf:rest rdf:nodeID="node201"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node201">
+	<rdf:rest rdf:nodeID="node202"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node202">
+	<rdf:rest rdf:nodeID="node203"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node203">
+	<rdf:rest rdf:nodeID="node204"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node204">
+	<rdf:rest rdf:nodeID="node205"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node205">
+	<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node209">
+	<geo:asWKT rdf:datatype="http://www.ontotext.com/plugins/geosparql#wktLiteral">POINT(77.5966 12.9216)</geo:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node212">
+	<geo:asWKT rdf:datatype="http://www.ontotext.com/plugins/geosparql#wktLiteral">POINT(77.5966 12.9216)</geo:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node215">
+	<geo:asWKT rdf:datatype="http://www.opengis.net/ont/geosparql#wktLiteral">POINT(77.5966 12.9216)</geo:asWKT>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.9816</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#xyz1234">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.9716</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<wgs:lat rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.7128</wgs:lat>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77.6946</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#xyz1234">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77.5946</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<wgs:long rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-74.006</wgs:long>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123">
+	<avoidsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Peanut"/>
+	<avoidsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Gluten"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<avoidsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Peanut"/>
+	<avoidsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Gluten"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<containsAllergen rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Eggs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<donatedBy rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841464540dd1a066f42dc98_Donor"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<hasDonationStatus rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Available"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#CookedFood"/>
+	<hasFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High">
+	<hasHigherPriorityThan rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Medium"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Medium">
+	<hasHigherPriorityThan rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Low"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<hasPriority rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#High"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO2">
+	<prefersFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123">
+	<prefersFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+	<prefersFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Fruit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<prefersFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Meat"/>
+	<prefersFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Fruit"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123">
+	<rejectsFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Dairy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc1234">
+	<rejectsFoodType rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Dairy"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#68414fe734e8f5780fffa885">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500c34e8f5780fffa887">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa889">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500d34e8f5780fffa88b">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841500e34e8f5780fffa88d">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501034e8f5780fffa88f">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501134e8f5780fffa891">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501234e8f5780fffa893">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501334e8f5780fffa895">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501434e8f5780fffa897">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501534e8f5780fffa899">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501634e8f5780fffa89b">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501734e8f5780fffa89d">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501834e8f5780fffa89f">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501934e8f5780fffa8a1">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501a34e8f5780fffa8a3">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501b34e8f5780fffa8a5">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501c34e8f5780fffa8a7">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501d34e8f5780fffa8a9">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501e34e8f5780fffa8ab">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841501f34e8f5780fffa8ad">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502034e8f5780fffa8af">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502134e8f5780fffa8b1">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502234e8f5780fffa8b3">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502334e8f5780fffa8b5">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#6841502534e8f5780fffa8b7">
+	<hasExpiryDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-01T00:00:00Z</hasExpiryDate>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123_Location">
+	<hasLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.9716</hasLatitude>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#don12345_Location">
+	<hasLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.9716</hasLatitude>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123_Location">
+	<hasLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">77.5946</hasLongitude>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#don12345_Location">
+	<hasLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#float">77.5946</hasLongitude>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#Donor1">
+	<userMongoID>123</userMongoID>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO1">
+	<userMongoID>tyu</userMongoID>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#NGO2">
+	<userMongoID>ghj</userMongoID>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123">
+	<hasUserLocation rdf:resource="http://www.semanticweb.org/ryuzaki/ontologies/2025/4/FoodWastageOntology#abc123_Location"/>
+</rdf:Description>
+
+</rdf:RDF>
