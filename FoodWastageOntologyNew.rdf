@@ -1003,15 +1003,6 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/foodwaste/ontology#hasDonationLocation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasDonationLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
-        <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/foodwaste/ontology#hasDonationStatus -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasDonationStatus">
@@ -1082,15 +1073,6 @@ above the local reference ellipsoid).</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/foodwaste/ontology#hasUserLocation -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasUserLocation">
-        <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#User"/>
-        <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/foodwaste/ontology#isPreferredBy -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#isPreferredBy">
@@ -1127,15 +1109,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#rejectsFoodType">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://w3id.org/foodwaste/ontology#userLocatedAt -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#userLocatedAt">
-        <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#User"/>
-        <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
+        <rdfs:comment>links user to the food type they reject</rdfs:comment>
+        <rdfs:label>rejects food type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1487,7 +1462,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:label></rdfs:label>
+        <rdfs:comment>An enumeration of substances that may cause allergic reactions.</rdfs:comment>
+        <rdfs:label>Allergens</rdfs:label>
     </owl:Class>
     
 
@@ -1551,6 +1527,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#Donor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/foodwaste/ontology#User"/>
         <owl:disjointWith rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
+        <rdfs:comment>User is a donor</rdfs:comment>
+        <rdfs:label>Donor</rdfs:label>
     </owl:Class>
     
 
@@ -1562,12 +1540,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/foodwaste/ontology#containsAllergen"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#Allergen"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/foodwaste/ontology#hasDonationLocation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1623,12 +1595,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     
 
 
-    <!-- https://w3id.org/foodwaste/ontology#Location -->
-
-    <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#Location"/>
-    
-
-
     <!-- https://w3id.org/foodwaste/ontology#NGO -->
 
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#NGO">
@@ -1651,6 +1617,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>User is an NGO</rdfs:comment>
+        <rdfs:label>NGO</rdfs:label>
     </owl:Class>
     
 
@@ -1706,12 +1674,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
     <!-- https://w3id.org/foodwaste/ontology#User -->
 
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#User">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/foodwaste/ontology#hasUserLocation"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>An individual or organization interacting with the food wastage system.</rdfs:comment>
         <rdfs:label>User</rdfs:label>
     </owl:Class>
@@ -2663,7 +2625,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdf:type rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
         <avoidsAllergen rdf:resource="https://w3id.org/foodwaste/ontology#Gluten"/>
         <avoidsAllergen rdf:resource="https://w3id.org/foodwaste/ontology#Peanut"/>
-        <hasUserLocation rdf:resource="https://w3id.org/foodwaste/ontology#abc123_Location"/>
         <prefersFoodType rdf:resource="https://w3id.org/foodwaste/ontology#Fruit"/>
         <prefersFoodType rdf:resource="https://w3id.org/foodwaste/ontology#Meat"/>
         <rejectsFoodType rdf:resource="https://w3id.org/foodwaste/ontology#Dairy"/>
@@ -2688,17 +2649,13 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <!-- https://w3id.org/foodwaste/ontology#abc123_Location -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/foodwaste/ontology#abc123_Location">
-        <rdf:type rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/foodwaste/ontology#abc123_Location"/>
     
 
 
     <!-- https://w3id.org/foodwaste/ontology#don12345_Location -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/foodwaste/ontology#don12345_Location">
-        <rdf:type rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="https://w3id.org/foodwaste/ontology#don12345_Location"/>
     
 
 
@@ -3476,28 +3433,6 @@ basic geo vocab
  an accuracy appropriate for the size of the object and uses such as mapping .
  </rdfs:comment>
         <rdfs:label>location</rdfs:label>
-    </rdf:Description>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#Allergen"/>
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#DonationStatus"/>
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#FoodDonation"/>
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#FoodType"/>
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#Location"/>
-            <rdf:Description rdf:about="https://w3id.org/foodwaste/ontology#User"/>
-        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
