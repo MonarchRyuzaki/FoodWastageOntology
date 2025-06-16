@@ -53,11 +53,12 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-16</dc:date>
         <dc:description xml:lang="en">An ontology to model food donation logistics.</dc:description>
         <dc:publisher>Shivam Ganguly</dc:publisher>
-        <dc:rights>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</dc:rights>
+        <dc:rights>https://creativecommons.org/licenses/by/4.0/</dc:rights>
         <dc:source>https://github.com/MonarchRyuzaki/FoodWastageOntology</dc:source>
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
         <vann:preferredNamespacePrefix>fwo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
+        <cc:license>https://creativecommons.org/licenses/by/4.0/</cc:license>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
     </owl:Ontology>
     
