@@ -45,7 +45,14 @@
     <owl:Ontology rdf:about="https://w3id.org/foodwaste/ontology">
         <owl:versionIRI rdf:resource="https://w3id.org/foodwaste/ontology/v1"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-inverses-20130430"/>
+        <dc:creator>Shivam Ganguly</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-16</dc:date>
+        <dc:description xml:lang="en">An ontology to model food donation logistics.</dc:description>
+        <dc:publisher>Shivam Ganguly</dc:publisher>
+        <dc:rights>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</dc:rights>
+        <dc:source>https://github.com/MonarchRyuzaki/FoodWastageOntology</dc:source>
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
+        <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
     </owl:Ontology>
     
 
