@@ -43,7 +43,6 @@
      xmlns:geo-ont="http://www.geonames.org/ontology#"
      xmlns:graphdb="http://www.ontotext.com/config/graphdb#"
      xmlns:ontogeo="http://www.ontotext.com/owlim/geo#"
-     xmlns:elements="http://purl.org/dc/elements/1.1/#"
      xmlns:onto-geo="http://www.ontotext.com/plugins/geosparql#">
     <owl:Ontology rdf:about="https://w3id.org/foodwaste/ontology">
         <owl:versionIRI rdf:resource="https://w3id.org/foodwaste/ontology/v1"/>
@@ -59,12 +58,11 @@
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:publisher>Shivam Ganguly</dcterms:publisher>
         <dcterms:source rdf:resource="https://github.com/MonarchRyuzaki/FoodWastageOntology"/>
-        <dcterms:type>Draft</dcterms:type>
+        <dcterms:status xml:lang="en">draft</dcterms:status>
         <vann:preferredNamespacePrefix>fwo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
         <owl:versionInfo>v1.0</owl:versionInfo>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
-        <prov:wasGeneratedBy>Protégé</prov:wasGeneratedBy>
     </owl:Ontology>
     
 
@@ -282,14 +280,6 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/#license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#license">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     </owl:AnnotationProperty>
     
 
@@ -692,6 +682,12 @@
     
 
 
+    <!-- http://purl.org/dc/terms/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/status"/>
+    
+
+
     <!-- http://purl.org/dc/terms/subject -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject">
@@ -932,6 +928,14 @@ above the local reference ellipsoid).</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#license -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/#license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+    </owl:ObjectProperty>
     
 
 
