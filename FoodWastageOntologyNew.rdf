@@ -50,15 +50,21 @@
         <owl:imports rdf:resource="http://purl.org/vocab/vann/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-inverses-20130430"/>
         <dc:creator>Shivam Ganguly</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-16</dc:date>
         <dc:description xml:lang="en">An ontology to model food donation logistics.</dc:description>
-        <dc:publisher>Shivam Ganguly</dc:publisher>
-        <dc:source>https://github.com/MonarchRyuzaki/FoodWastageOntology</dc:source>
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
+        <dcterms:bibliographicCitation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://purl.org/dc/elements/1.1/</dcterms:bibliographicCitation>
+        <dcterms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-05-16</dcterms:created>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://w3id/org/foodwaste/ontology</dcterms:identifier>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-06-16</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <dcterms:publisher>Shivam Ganguly</dcterms:publisher>
+        <dcterms:source rdf:resource="https://github.com/MonarchRyuzaki/FoodWastageOntology"/>
+        <dcterms:type>Draft</dcterms:type>
         <vann:preferredNamespacePrefix>fwo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
+        <owl:versionInfo>v1.0</owl:versionInfo>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
+        <prov:wasGeneratedBy>Protégé</prov:wasGeneratedBy>
     </owl:Ontology>
     
 
@@ -747,6 +753,15 @@
     <!-- http://www.opengis.net/ont/geosparql#asWKT -->
 
     <owl:AnnotationProperty rdf:about="http://www.opengis.net/ont/geosparql#asWKT"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:comment>v1.0</rdfs:comment>
+        <rdfs:label>Version Info</rdfs:label>
+    </rdf:Description>
     
 
 
@@ -3295,10 +3310,6 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
         <rdfs:comment xml:lang="en">Date (often a range) of validity of a resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Date Valid</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
-        <rdfs:comment>v1.0</rdfs:comment>
-        <rdfs:label>Version Info</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#">
         <dc:date>$Date: 2009/04/20 15:00:30 $</dc:date>
