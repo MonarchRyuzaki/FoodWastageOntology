@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/foodwaste/ontology#"
      xml:base="https://w3id.org/foodwaste/ontology"
+     xmlns:cc="http://web.resource.org/cc/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:fn="http://www.w3.org/2005/xpath-functions"
      xmlns:sr="http://www.openrdf.org/config/repository/sail#"
@@ -30,6 +31,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:spif="http://spinrdf.org/spif#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:array="http://www.w3.org/2005/xpath-functions/array"
      xmlns:rdf4j="http://rdf4j.org/schema/rdf4j#"
      xmlns:shacl="http://rdf4j.org/config/sail/shacl#"
@@ -41,9 +43,11 @@
      xmlns:geo-ont="http://www.geonames.org/ontology#"
      xmlns:graphdb="http://www.ontotext.com/config/graphdb#"
      xmlns:ontogeo="http://www.ontotext.com/owlim/geo#"
+     xmlns:elements="http://purl.org/dc/elements/1.1/#"
      xmlns:onto-geo="http://www.ontotext.com/plugins/geosparql#">
     <owl:Ontology rdf:about="https://w3id.org/foodwaste/ontology">
         <owl:versionIRI rdf:resource="https://w3id.org/foodwaste/ontology/v1"/>
+        <owl:imports rdf:resource="http://purl.org/vocab/vann/"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-inverses-20130430"/>
         <dc:creator>Shivam Ganguly</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-06-16</dc:date>
@@ -52,6 +56,8 @@
         <dc:rights>&lt;https://creativecommons.org/licenses/by/4.0/&gt;</dc:rights>
         <dc:source>https://github.com/MonarchRyuzaki/FoodWastageOntology</dc:source>
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
+        <vann:preferredNamespacePrefix>fwo</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
     </owl:Ontology>
     
@@ -270,6 +276,14 @@
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
         <rdfs:label xml:lang="en">Type</rdfs:label>
         <skos:note xml:lang="en">A [second property](/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/type) with the same name as this property has been declared in the [dcterms: namespace](http://purl.org/dc/terms/).  See the Introduction to the document [DCMI Metadata Terms](/specifications/dublin-core/dcmi-terms/) for an explanation.</skos:note>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/#license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/#license">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     </owl:AnnotationProperty>
     
 
