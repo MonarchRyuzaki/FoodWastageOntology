@@ -684,7 +684,10 @@
 
     <!-- http://purl.org/dc/terms/status -->
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/status"/>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/status">
+        <rdfs:comment xml:lang="en">An enumeration of substances that may cause allergic reactions</rdfs:comment>
+        <rdfs:label xml:lang="en">Allergens</rdfs:label>
+    </owl:AnnotationProperty>
     
 
 
@@ -950,6 +953,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#avoidsAllergen">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Allergen"/>
+        <rdfs:comment>Links a user to an allergen they need to avoid</rdfs:comment>
+        <rdfs:label>avoids Allergen</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -960,6 +965,8 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
+        <rdfs:comment>Indicates the user who has claimed this donation.</rdfs:comment>
+        <rdfs:label>claimed by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -969,6 +976,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#containsAllergen">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Allergen"/>
+        <rdfs:comment>Denotes that a donation includes a specified allergen.</rdfs:comment>
+        <rdfs:label>contains Allergen</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -979,13 +988,18 @@ above the local reference ellipsoid).</rdfs:comment>
         <owl:inverseOf rdf:resource="https://w3id.org/foodwaste/ontology#hasDonated"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Donor"/>
+        <rdfs:comment>Indicates the user or farmer who made this donation.</rdfs:comment>
+        <rdfs:label>donated by</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/foodwaste/ontology#hasDonated -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasDonated"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasDonated">
+        <rdfs:comment>Links a user to the donations they have made.</rdfs:comment>
+        <rdfs:label>has donated</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -1004,6 +1018,8 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#DonationStatus"/>
+        <rdfs:comment>Associates a donation with its current status.</rdfs:comment>
+        <rdfs:label>has donation status</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1013,6 +1029,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasFoodType">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
+        <rdfs:comment>Specifies the type of food in this donation.</rdfs:comment>
+        <rdfs:label>has food type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1024,6 +1042,8 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
+        <rdfs:comment>Indicates that one priority level is higher than another.</rdfs:comment>
+        <rdfs:label>has higher priority than</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1034,6 +1054,8 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
+        <rdfs:comment>Indicates that one priority level is lower than another.</rdfs:comment>
+        <rdfs:label>has lower priority than</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1043,6 +1065,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasParentType">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
+        <rdfs:comment>Relates a food type to its more general parent category.</rdfs:comment>
+        <rdfs:label>has parent type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1052,6 +1076,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#hasPriority">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
+        <rdfs:comment>Specifies the priority level assigned to a donation.</rdfs:comment>
+        <rdfs:label>has priority</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1069,6 +1095,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#isPreferredBy">
         <owl:inverseOf rdf:resource="https://w3id.org/foodwaste/ontology#prefersFoodType"/>
+        <rdfs:comment>Indicates that a donation is preferred by a particular user.</rdfs:comment>
+        <rdfs:label>is preferred by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1077,6 +1105,8 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#isRejectedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/foodwaste/ontology#rejectsFoodType"/>
+        <rdfs:label>Indicates that a donation has been rejected by a particular user.</rdfs:label>
+        <rdfs:label>is rejected by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1086,6 +1116,8 @@ above the local reference ellipsoid).</rdfs:comment>
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#prefersFoodType">
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#NGO"/>
         <rdfs:range rdf:resource="https://w3id.org/foodwaste/ontology#FoodType"/>
+        <rdfs:comment>Links a user to the types of food they prefer.</rdfs:comment>
+        <rdfs:label>prefers food type</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1223,6 +1255,8 @@ above the local reference ellipsoid).</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>Denotes the expiration date of a donated food item</rdfs:comment>
+        <rdfs:label xml:lang="en">has expiry date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1453,6 +1487,7 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:label></rdfs:label>
     </owl:Class>
     
 
@@ -1471,6 +1506,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>A food donation that is nearing its expiry and should be prioritized.</rdfs:comment>
+        <rdfs:label>At‑Risk Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1485,6 +1522,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 <owl:hasValue rdf:resource="https://w3id.org/foodwaste/ontology#Claimed"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A food donation that has been claimed by a recipient.</rdfs:comment>
+        <rdfs:label>Claimed Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1501,6 +1540,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>An enumeration of possible statuses for a food donation (e.g., At Risk, Claimed).</rdfs:comment>
+        <rdfs:label>Donation Status</rdfs:label>
     </owl:Class>
     
 
@@ -1547,6 +1588,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#Priority"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A record representing a donation of food items.</rdfs:comment>
+        <rdfs:label>Food Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1574,6 +1617,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>An enumeration of categories of food (e.g., fruits, vegetables, dairy)</rdfs:comment>
+        <rdfs:label>Food Type</rdfs:label>
     </owl:Class>
     
 
@@ -1614,6 +1659,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#PreferredDonation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
+        <rdfs:comment>A donation marked as preferred by a user based on their preferences.</rdfs:comment>
+        <rdfs:label>Preferred Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1630,6 +1677,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>An ordered enumeration indicating the urgency or importance of a donation.</rdfs:comment>
+        <rdfs:label>Priority</rdfs:label>
     </owl:Class>
     
 
@@ -1638,6 +1687,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#TrustedDonation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
+        <rdfs:comment>A donation from a source flagged as trusted.</rdfs:comment>
+        <rdfs:label>Trusted Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1646,6 +1697,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
 
     <owl:Class rdf:about="https://w3id.org/foodwaste/ontology#UrgentDonation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/foodwaste/ontology#FoodDonation"/>
+        <rdfs:comment>A donation requiring immediate pickup or distribution</rdfs:comment>
+        <rdfs:label>Urgent Donation</rdfs:label>
     </owl:Class>
     
 
@@ -1659,6 +1712,8 @@ sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P
                 <owl:someValuesFrom rdf:resource="https://w3id.org/foodwaste/ontology#Location"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>An individual or organization interacting with the food wastage system.</rdfs:comment>
+        <rdfs:label>User</rdfs:label>
     </owl:Class>
     
 
