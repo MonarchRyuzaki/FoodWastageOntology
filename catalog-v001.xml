@@ -2,6 +2,8 @@
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-inverses-20130430" uri="http://www.w3.org/ns/prov#"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1750073217704" name="https://w3id.org/foodwaste/ontology" uri="FWO_FOOPS.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1750075194840" name="http://www.w3.org/2002/07/owl" uri="dc.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1750075194840" name="http://www.w3.org/ns/prov" uri="prov.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1750075194840" name="https://w3id.org/foodwaste/ontology" uri="FoodWastageOntologyNew.rdf"/>
     </group>
 </catalog>
