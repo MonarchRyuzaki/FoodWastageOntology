@@ -1087,7 +1087,7 @@ above the local reference ellipsoid).</rdfs:comment>
 
     <owl:ObjectProperty rdf:about="https://w3id.org/foodwaste/ontology#isRejectedBy">
         <owl:inverseOf rdf:resource="https://w3id.org/foodwaste/ontology#rejectsFoodType"/>
-        <rdfs:comment>Indicates that a donation has been rejected by a particular user.</rdfs:comment>
+        <rdfs:comment>Indicates that a donation type has been rejected by a particular user.</rdfs:comment>
         <rdfs:label>is rejected by</rdfs:label>
     </owl:ObjectProperty>
     
