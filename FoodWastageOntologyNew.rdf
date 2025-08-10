@@ -18,6 +18,7 @@
      xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:core="http://purl.org/vocab/frbr/core#"
      xmlns:dcam="http://purl.org/dc/dcam/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -59,6 +60,7 @@
         <dcterms:publisher>Shivam Ganguly</dcterms:publisher>
         <dcterms:source rdf:resource="https://github.com/MonarchRyuzaki/FoodWastageOntology"/>
         <dcterms:status xml:lang="en">draft</dcterms:status>
+        <bibo:doi>10.5281/zenodo.16788052</bibo:doi>
         <vann:preferredNamespacePrefix>fwo</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
         <owl:versionInfo>v1.0</owl:versionInfo>
@@ -741,6 +743,12 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/elements/1.1/date"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
     
 
 
