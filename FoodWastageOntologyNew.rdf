@@ -53,7 +53,7 @@
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
         <dcterms:bibliographicCitation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://purl.org/dc/elements/1.1/</dcterms:bibliographicCitation>
         <dcterms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-05-16</dcterms:created>
-        <dcterms:identifier rdf:resource="https://w3id.org/foodwaste/ontology"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://w3id.org/foodwaste/ontology</dcterms:identifier>
         <dcterms:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-06-16</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:publisher>Shivam Ganguly</dcterms:publisher>
