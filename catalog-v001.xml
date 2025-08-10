@@ -3,8 +3,8 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/vocab/vann/" uri="vann-vocab-20100607.rdf"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-inverses-20130430" uri="http://www.w3.org/ns/prov#"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1754810260349" name="http://www.w3.org/2002/07/owl" uri="dc.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1754810260349" name="http://www.w3.org/ns/prov" uri="prov.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1754810260349" name="https://w3id.org/foodwaste/ontology" uri="FoodWastageOntologyNew.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1754827433268" name="http://www.w3.org/2002/07/owl" uri="dc.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1754827433268" name="http://www.w3.org/ns/prov" uri="prov.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1754827433268" name="https://w3id.org/foodwaste/ontology" uri="FoodWastageOntologyNew.rdf"/>
     </group>
 </catalog>

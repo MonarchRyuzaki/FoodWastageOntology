@@ -39,6 +39,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:geoext="http://rdf.useekm.com/ext#"
+     xmlns:schema="https://schema.org/"
      xmlns:sesame="http://www.openrdf.org/schema/sesame#"
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:geo-ont="http://www.geonames.org/ontology#"
@@ -66,6 +67,7 @@
         <owl:versionInfo>v1.0</owl:versionInfo>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
         <foaf:logo rdf:resource="https://raw.githubusercontent.com/MonarchRyuzaki/FoodWastageFrontend/refs/heads/master/public/logo.svg"/>
+        <schema:includedInDataCatalog rdf:resource="https://github.com/MonarchRyuzaki/FoodWastageOntology"/>
     </owl:Ontology>
     
 
@@ -834,6 +836,12 @@ above the local reference ellipsoid).</rdfs:comment>
     <!-- http://xmlns.com/foaf/0.1/logo -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- https://schema.org/includedInDataCatalog -->
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/includedInDataCatalog"/>
     
 
 
