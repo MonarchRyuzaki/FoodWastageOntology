@@ -53,7 +53,7 @@
         <dc:title xml:lang="en">Food Wastage Ontology</dc:title>
         <dcterms:bibliographicCitation rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://purl.org/dc/elements/1.1/</dcterms:bibliographicCitation>
         <dcterms:created rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-05-16</dcterms:created>
-        <dcterms:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://w3id/org/foodwaste/ontology</dcterms:identifier>
+        <dcterms:identifier rdf:resource="https://w3id.org/foodwaste/ontology"/>
         <dcterms:issued rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2025-06-16</dcterms:issued>
         <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <dcterms:publisher>Shivam Ganguly</dcterms:publisher>
@@ -63,6 +63,7 @@
         <vann:preferredNamespaceUri>https://w3id.org/foodwaste/ontology#</vann:preferredNamespaceUri>
         <owl:versionInfo>v1.0</owl:versionInfo>
         <prov:wasGeneratedBy xml:lang="en">Protégé</prov:wasGeneratedBy>
+        <foaf:logo rdf:resource="https://raw.githubusercontent.com/MonarchRyuzaki/FoodWastageFrontend/refs/heads/master/public/logo.svg"/>
     </owl:Ontology>
     
 
@@ -819,6 +820,12 @@ above the local reference ellipsoid).</rdfs:comment>
     <!-- http://xmlns.com/foaf/0.1/based_near -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/based_near"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
     
 
 
